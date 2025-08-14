@@ -3,109 +3,125 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Known As Aigada - Professional Healthcare Portfolio</title>
+<title>Known As Aigada - Healthcare Professional</title>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
 <style>
+    :root {
+        --primary: #0a3d3d;
+        --accent: #d4af37;
+        --bg-dark: #051f1f;
+        --text-light: #ffffff;
+        --text-dark: #222;
+    }
     body {
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-family: 'Poppins', sans-serif;
         margin: 0;
-        background-color: #f8f9fa;
-        color: #333;
+        background: #f5f6fa;
+        color: var(--text-dark);
     }
 
-    /* Hero Section */
+    /* Hero */
     header {
-        background: linear-gradient(135deg, #004d4d, #007777);
-        color: white;
+        position: relative;
+        height: 90vh;
+        background: linear-gradient(rgba(5,31,31,0.85), rgba(5,31,31,0.85)), 
+                    url('https://images.unsplash.com/photo-1580281658627-088a2c7f08aa?auto=format&fit=crop&w=1400&q=80') no-repeat center/cover;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
         text-align: center;
-        padding: 50px 20px;
-        animation: fadeIn 1s ease-in-out;
+        color: var(--text-light);
+        overflow: hidden;
     }
     header img {
-        width: 150px;
-        height: 150px;
+        width: 160px;
+        height: 160px;
         object-fit: cover;
         border-radius: 50%;
-        border: 4px solid gold;
+        border: 4px solid var(--accent);
+        box-shadow: 0 0 20px rgba(212,175,55,0.6);
         margin-bottom: 20px;
+        animation: float 4s ease-in-out infinite;
     }
     header h1 {
+        font-size: 2.8rem;
+        font-weight: 700;
         margin: 0;
-        font-size: 2.5rem;
-        font-weight: bold;
     }
     header p {
-        margin-top: 5px;
         font-size: 1.2rem;
-        font-style: italic;
-        color: #e0e0e0;
+        opacity: 0.85;
+        margin-top: 8px;
     }
 
-    /* Sections */
+    /* Glass Cards */
     section {
         max-width: 1100px;
         margin: auto;
-        padding: 30px 20px;
+        padding: 40px 20px;
     }
     h2 {
-        color: #004d4d;
-        border-bottom: 3px solid gold;
-        display: inline-block;
-        padding-bottom: 5px;
+        color: var(--primary);
+        font-weight: 700;
         margin-bottom: 20px;
     }
-
-    /* Card styling */
     .card {
-        background: white;
+        background: rgba(255,255,255,0.8);
+        backdrop-filter: blur(12px);
+        padding: 25px;
+        border-radius: 16px;
+        margin-bottom: 30px;
+        box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+        transform: translateY(20px);
+        opacity: 0;
+        transition: all 0.6s ease;
+    }
+    .card.visible {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    .contact {
+        background: var(--primary);
+        color: white;
         padding: 20px;
         border-radius: 12px;
-        margin-bottom: 25px;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        transition: transform 0.3s ease;
-        animation: fadeUp 0.8s ease;
     }
-    .card:hover {
-        transform: translateY(-5px);
-    }
-
-    /* Contact Box */
-    .contact {
-        background-color: #fff8e1;
-        border-left: 6px solid gold;
-        padding: 20px;
-        border-radius: 8px;
+    .contact a {
+        color: var(--accent);
+        text-decoration: none;
     }
 
     /* Footer */
     footer {
         text-align: center;
-        background: #004d4d;
+        background: var(--bg-dark);
         color: white;
         padding: 15px;
         font-size: 0.9rem;
+        margin-top: 40px;
     }
 
     /* Animations */
-    @keyframes fadeIn {
-        from { opacity: 0; transform: translateY(-20px); }
-        to { opacity: 1; transform: translateY(0); }
-    }
-    @keyframes fadeUp {
-        from { opacity: 0; transform: translateY(20px); }
-        to { opacity: 1; transform: translateY(0); }
+    @keyframes float {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-10px); }
     }
 
     /* Responsive */
     @media (max-width: 768px) {
         header h1 { font-size: 2rem; }
-        header img { width: 120px; height: 120px; }
+        header p { font-size: 1rem; }
     }
 </style>
 </head>
 <body>
 
 <header>
-    <img src="https://via.placeholder.com/150" alt="Known As Aigada">
+    <img src="https://via.placeholder.com/160" alt="Known As Aigada">
     <h1>Known As Aigada</h1>
     <p>Registered Community Health Practitioner (RCHP)</p>
 </header>
@@ -118,8 +134,8 @@
         <p><strong>Expected Graduation:</strong> 30/08/2025</p>
         <p><strong>Email:</strong> <a href="mailto:">[Email Not Provided]</a></p>
         <p><strong>WhatsApp:</strong> +234 903 452 9004</p>
-        <p><strong>Short Bio:</strong> I am a dedicated and passionate healthcare student specializing in community health. With a strong interest in preventive medicine and public health education, I strive to bring positive change to underserved communities.</p>
-        <p><strong>Career Goals:</strong> To become a leading advocate for community-based healthcare, empowering individuals with knowledge and access to essential medical services, and ultimately contributing to healthier, happier societies.</p>
+        <p><strong>Short Bio:</strong> Passionate healthcare student committed to improving community health through preventive care and education. Skilled in outreach programs, health awareness campaigns, and patient-centered care delivery.</p>
+        <p><strong>Career Goals:</strong> To be a leader in community healthcare, bringing sustainable health solutions to rural and underserved populations.</p>
     </div>
 
     <h2>Academic Achievements</h2>
@@ -133,20 +149,9 @@
 
     <h2>Portfolio</h2>
     <div class="card">
-        <p><strong>Research Project:</strong> “Improving Maternal Health Awareness in Rural Areas” (Jan 2024)</p>
-        <p><em>Conducted surveys and implemented educational programs that increased maternal health awareness by 40% in targeted communities.</em></p>
-        
-        <hr>
-        
-        <p><strong>Volunteer Work:</strong> Community Health Volunteer – Hope for All Foundation (2023)</p>
-        <p><em>Assisted in organizing free health screenings and immunization drives for over 500 residents.</em></p>
-        
-        <hr>
-        
+        <p><strong>Research Project:</strong> “Improving Maternal Health Awareness in Rural Areas” (Jan 2024) – Increased maternal health awareness by 40% through targeted campaigns.</p>
+        <p><strong>Volunteer Work:</strong> Community Health Volunteer – Hope for All Foundation (2023) – Organized health screenings for 500+ residents.</p>
         <p><strong>Certifications:</strong> First Aid, BLS, HIPAA Compliance (2023–2024)</p>
-        
-        <hr>
-        
         <p><strong>Practical Experience:</strong> Clinical rotations at City General Hospital, focusing on maternal and child health services (2024).</p>
     </div>
 
@@ -159,8 +164,24 @@
 </section>
 
 <footer>
-    &copy; 2025 Known As Aigada | Premium Healthcare Portfolio
+    &copy; 2025 Known As Aigada | Modern Healthcare Portfolio
 </footer>
 
+<script>
+    // Scroll animation
+    const cards = document.querySelectorAll('.card');
+    const revealOnScroll = () => {
+        const triggerBottom = window.innerHeight * 0.85;
+        cards.forEach(card => {
+            const cardTop = card.getBoundingClientRect().top;
+            if (cardTop < triggerBottom) {
+                card.classList.add('visible');
+            }
+        });
+    };
+    window.addEventListener('scroll', revealOnScroll);
+    revealOnScroll();
+</script>
+
 </body>
-    </html>
+</html>
