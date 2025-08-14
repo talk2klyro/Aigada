@@ -1,69 +1,111 @@
-<!DOCTYPE <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Known As Aigada - Healthcare Professional</title>
+<title>Known As Aigada - Professional Healthcare Portfolio</title>
 <style>
     body {
-        font-family: Arial, sans-serif;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         margin: 0;
-        background-color: #f9fafb;
+        background-color: #f8f9fa;
         color: #333;
     }
+
+    /* Hero Section */
     header {
-        background-color: #008080;
+        background: linear-gradient(135deg, #004d4d, #007777);
         color: white;
-        padding: 20px;
         text-align: center;
+        padding: 50px 20px;
+        animation: fadeIn 1s ease-in-out;
+    }
+    header img {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 4px solid gold;
+        margin-bottom: 20px;
     }
     header h1 {
         margin: 0;
-        font-size: 2rem;
+        font-size: 2.5rem;
+        font-weight: bold;
     }
     header p {
-        margin: 5px 0 0;
+        margin-top: 5px;
+        font-size: 1.2rem;
         font-style: italic;
+        color: #e0e0e0;
     }
+
+    /* Sections */
     section {
-        padding: 20px;
-        max-width: 900px;
+        max-width: 1100px;
         margin: auto;
+        padding: 30px 20px;
     }
     h2 {
-        color: #008080;
-        border-bottom: 2px solid #008080;
+        color: #004d4d;
+        border-bottom: 3px solid gold;
+        display: inline-block;
         padding-bottom: 5px;
+        margin-bottom: 20px;
     }
+
+    /* Card styling */
     .card {
         background: white;
-        padding: 15px;
-        border-radius: 8px;
-        margin-bottom: 20px;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        padding: 20px;
+        border-radius: 12px;
+        margin-bottom: 25px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease;
+        animation: fadeUp 0.8s ease;
     }
-    .portfolio-item {
-        margin-bottom: 15px;
+    .card:hover {
+        transform: translateY(-5px);
     }
+
+    /* Contact Box */
     .contact {
-        background-color: #f0fdf4;
-        padding: 15px;
-        border: 1px solid #bbf7d0;
+        background-color: #fff8e1;
+        border-left: 6px solid gold;
+        padding: 20px;
         border-radius: 8px;
     }
+
+    /* Footer */
     footer {
         text-align: center;
-        padding: 15px;
-        background: #008080;
+        background: #004d4d;
         color: white;
+        padding: 15px;
         font-size: 0.9rem;
-        margin-top: 20px;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(-20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeUp {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+        header h1 { font-size: 2rem; }
+        header img { width: 120px; height: 120px; }
     }
 </style>
 </head>
 <body>
 
 <header>
+    <img src="https://via.placeholder.com/150" alt="Known As Aigada">
     <h1>Known As Aigada</h1>
     <p>Registered Community Health Practitioner (RCHP)</p>
 </header>
@@ -91,18 +133,21 @@
 
     <h2>Portfolio</h2>
     <div class="card">
-        <div class="portfolio-item">
-            <strong>Research Project:</strong> “Improving Maternal Health Awareness in Rural Areas” (Jan 2024)  
-            <em>Conducted surveys and implemented educational programs that increased maternal health awareness by 40% in targeted communities.</em>
-        </div>
-        <div class="portfolio-item">
-            <strong>Volunteer Work:</strong> Community Health Volunteer – Hope for All Foundation (2023)  
-            <em>Assisted in organizing free health screenings and immunization drives for over 500 residents.</em>
-        </div>
-        <div class="portfolio-item">
-            <strong>Certifications:</strong> First Aid, BLS, HIPAA Compliance (2023–2024)</div>
-        <div class="portfolio-item">
-            <strong>Practical Experience:</strong> Clinical rotations at City General Hospital, focusing on maternal and child health services (2024).</div>
+        <p><strong>Research Project:</strong> “Improving Maternal Health Awareness in Rural Areas” (Jan 2024)</p>
+        <p><em>Conducted surveys and implemented educational programs that increased maternal health awareness by 40% in targeted communities.</em></p>
+        
+        <hr>
+        
+        <p><strong>Volunteer Work:</strong> Community Health Volunteer – Hope for All Foundation (2023)</p>
+        <p><em>Assisted in organizing free health screenings and immunization drives for over 500 residents.</em></p>
+        
+        <hr>
+        
+        <p><strong>Certifications:</strong> First Aid, BLS, HIPAA Compliance (2023–2024)</p>
+        
+        <hr>
+        
+        <p><strong>Practical Experience:</strong> Clinical rotations at City General Hospital, focusing on maternal and child health services (2024).</p>
     </div>
 
     <h2>Contact</h2>
@@ -114,8 +159,8 @@
 </section>
 
 <footer>
-    &copy; 2025 Known As Aigada | Designed for Professional Healthcare Portfolio
+    &copy; 2025 Known As Aigada | Premium Healthcare Portfolio
 </footer>
 
 </body>
-</html>
+    </html>
